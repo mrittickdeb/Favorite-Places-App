@@ -31,11 +31,11 @@ class _LocationInputState extends State<LocationInput> {
          '&size=600x300'
          '&maptype=roadmap'
          '&markers=color:red%7Clabel:A%7C$lat,$lng'
-         '&key=${"AIzaSyCCPf43D47kgojP-ELcVKLldv3RcJBaq9s"}';
+         '&key=${"API_KEY"}';
   }
 
   Future<void> _savePlace(double latitude,double longitude) async{
-      final url=Uri.parse('https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyCCPf43D47kgojP-ELcVKLldv3RcJBaq9s');
+      final url=Uri.parse('https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=API_KEY');
 final response=await http.get(url);
 final resData=json.decode(response.body);
 final address=resData['results'][0]['formatted_address'];
