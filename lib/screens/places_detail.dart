@@ -16,7 +16,7 @@ class PlaceDetailScreen extends StatelessWidget{
          '&size=600x300'
          '&maptype=roadmap'
          '&markers=color:red%7C$lat,$lng'
-         '&key=${"AIzaSyCCPf43D47kgojP-ELcVKLldv3RcJBaq9s"}';
+         '&key=${"API_KEY"}';
   }
 
   @override
